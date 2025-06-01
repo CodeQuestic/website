@@ -1,0 +1,69 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables.scss" as *;
+
+.hero {
+  background-color: $base-color;
+  padding: $padding-all-1;
+  text-align: left;
+
+  @include respond-to("md") {
+    text-align: left;
+    padding: $padding-left-right-4-top-bottom-2;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 2rem;
+
+  @include respond-to("md") {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.content {
+  @include respond-to("md") {
+    max-width: 38rem;
+  }
+
+  .title {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 0.6rem;
+    @include respond-to("md") {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.highlights {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: $text-light-color;
+
+  @include respond-to("md") {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+.illustration {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,38 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    font-family: $font-family;
+    padding: 0;
+    margin: 0;
+  }
+
+  h1 {
+    color: $primary-color;
+    font-size: $h1-normal-font-size;
+
+    @include respond-to("md") {
+      font-size: $h1-md-font-size;
+    }
+  }
+
+  h2 {
+    color: $primary-color;
+    font-size: $h2-normal-font-size;
+
+    @include respond-to("md") {
+      font-size: $h2-md-font-size;
+    }
+  }
+
+  p {
+    font-size: $p-normal-font-size;
+    color: $text-dark-color;
+
+    @include respond-to("md") {
+      font-size: $p-md-font-size;
+    }
+  }
+}

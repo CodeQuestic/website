@@ -1,0 +1,98 @@
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/variables.scss" as *;
+
+.header {
+  background-color: $base-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding-all-1;
+  margin: 0rem;
+
+  @include respond-to("md") {
+    padding: $padding-all-2;
+    margin: $margin-left-right-2;
+  }
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $primary-color;
+  text-decoration: none;
+  font-family: $font-family-logo;
+}
+
+.desktopNav {
+  display: none;
+
+  @include respond-to("md") {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      color: $text-dark-color;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.hamburger {
+  display: block;
+  color: $primary-color;
+  position: relative;
+  z-index: 50;
+
+  @include respond-to("md") {
+    display: none;
+  }
+}
+
+.hamburgerOpen {
+  color: $base-color;
+}
+
+.mobileNav {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $primary-color;
+  color: $base-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  z-index: 40;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  a {
+    font-size: 1.2rem;
+    padding: 0.75rem 0;
+    color: $base-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}

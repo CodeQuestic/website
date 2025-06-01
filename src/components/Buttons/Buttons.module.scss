@@ -1,0 +1,25 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables.scss" as *;
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 0.5rem;
+  min-width: 7rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+
+  &--primary {
+    background-color: $primary-color;
+    color: $secondary-color;
+  }
+
+  &--outline {
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    background-color: transparent;
+  }
+}

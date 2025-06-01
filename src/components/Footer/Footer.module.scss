@@ -1,0 +1,47 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables.scss" as *;
+
+.footer {
+  background-color: $dark-color;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem;
+  padding: $padding-all-2;
+  text-align: center;
+  gap: 0.6rem;
+
+  @include respond-to("md") {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $padding-all-2;
+    margin: $margin-left-right-2;
+  }
+}
+
+.copy {
+  font-size: $p-footer-font-size;
+  color: $footer-primary-color;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  a {
+    font-size: $p-footer-font-size;
+    color: $footer-secondary-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
