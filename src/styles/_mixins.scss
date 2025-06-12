@@ -8,4 +8,10 @@
     } @else if $breakpoint == "xl" {
       @media (min-width: 1280px) { @content; }
     }
-}  
+}
+
+@mixin mobile-devices {
+    @media (max-width: 640px) {
+        @content;
+    }
+}
