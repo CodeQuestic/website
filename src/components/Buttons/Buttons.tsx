@@ -6,7 +6,7 @@ interface ButtonProps {
   href?: string;
   type?: "button" | "submit" | "reset";
   styleType?: "primary" | "outline";
-  children: React.ReactNode;
+  text: string;
   onClick?: () => void;
 }
 
@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({
   href,
   type = "button",
   styleType = "primary",
-  children,
+  text,
   onClick,
 }) => {
   const className = `${styles.button} ${styles[`button--${styleType}`]}`;
@@ -22,14 +22,14 @@ const Button: React.FC<ButtonProps> = ({
   if (href) {
     return (
       <Link href={href} className={className}>
-        {children}
+        {text}
       </Link>
     );
   }
 
   return (
     <button type={type} className={className} onClick={onClick}>
-      {children}
+      {text}
     </button>
   );
 };
