@@ -4,8 +4,8 @@ export default function Contribute() {
       <h1>Contribute CodeQuestic</h1>
       <p>
         CodeQuestic is an open-source platform designed to empower developers of
-        all skill levels. Whether you're just starting out or looking to
-        contribute to production-grade systems, you'll find a welcoming
+        all skill levels. Whether you&apos;re just starting out or looking to
+        contribute to production-grade systems, you&apos;ll find a welcoming
         community and a wealth of resources here.
       </p>
       <p>
