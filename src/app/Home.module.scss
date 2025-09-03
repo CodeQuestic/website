@@ -1,5 +1,6 @@
 @use "../styles/mixins" as *;
 @use "../styles/variables.scss" as *;
+@use "sass:color";
 
 .hero {
   background-color: $pure-white;
@@ -238,7 +239,7 @@
           font-size: 0.9rem;
           
           &:hover {
-            color: darken($primary-color, 10%);
+            color: color.adjust($primary-color, $lightness: -10%);
           }
         }
       }
