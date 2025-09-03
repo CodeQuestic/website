@@ -2,7 +2,7 @@
 @use "../styles/variables.scss" as *;
 
 .hero {
-  background-color: $base-color;
+  background-color: $pure-white;
   padding: $padding-all-1;
   text-align: left;
 
@@ -18,8 +18,17 @@
     gap: 2rem;
 
     @include respond-to("md") {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    @include respond-to("xl") {
       flex-direction: row;
-      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
     }
 
     .content {
