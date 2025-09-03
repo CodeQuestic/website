@@ -2,6 +2,7 @@ export type ButtonStyleType = "primary" | "outline";
 
 export interface Action {
   href: string;
+  target: "_blank" | "_self";
   text: string;
   styleType: ButtonStyleType;
 }
@@ -18,13 +19,6 @@ export interface AboutFeature {
   icon: string;
   title: string;
   description: string;
-}
-
-export interface AboutContent {
-  title: string;
-  description: string;
-  content: string;
-  features: AboutFeature[];
 }
 
 export interface StatsItem {
@@ -59,7 +53,6 @@ export interface CommunityContent {
 
 export interface HomeContent {
   hero: HeroContent;
-  about: AboutContent;
   stats: StatsContent;
   featured: FeaturedContent;
   community: CommunityContent;

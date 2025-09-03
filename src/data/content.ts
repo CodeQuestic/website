@@ -11,12 +11,14 @@ export const siteContent: SiteContent = {
       actions: [
         {
           href: "https://github.com/CodeQuestic",
-          text: "⭐ Star on GitHub",
+          target: "_blank",
+          text: "🔮 GitHub",
           styleType: "primary",
         },
         {
-          href: "https://github.com/orgs/CodeQuestic/repositories",
-          text: "🔎 Explore Projects",
+          href: "/contribute",
+          target: "_self",
+          text: "Contribute",
           styleType: "outline",
         },
       ],
@@ -27,45 +29,12 @@ export const siteContent: SiteContent = {
         "🫂 Friendly, collaborative community",
       ],
     },
-    about: {
-      title: "About CodeQuestic",
-      description:
-        "Empowering developers through open-source collaboration and learning",
-      content:
-        "CodeQuestic is more than just a collection of repositories—it's a thriving community where developers of all skill levels come together to build, learn, and grow. We believe that the best way to learn programming is by doing, collaborating, and contributing to meaningful projects.",
-      features: [
-        {
-          icon: "🚀",
-          title: "Production-Ready Projects",
-          description:
-            "Work on real applications that solve actual problems and can be used by thousands of users.",
-        },
-        {
-          icon: "📚",
-          title: "Learn by Doing",
-          description:
-            "Comprehensive documentation, tutorials, and mentorship to guide your learning journey.",
-        },
-        {
-          icon: "🤝",
-          title: "Collaborative Environment",
-          description:
-            "Connect with fellow developers, share knowledge, and build lasting professional relationships.",
-        },
-        {
-          icon: "🛠️",
-          title: "Developer Tools",
-          description:
-            "Utilities and tools designed to boost productivity and streamline your development workflow.",
-        },
-      ],
-    },
     stats: {
-      title: "Join Our Growing Community",
+      title: "Shaping Tomorrow, Together",
       items: [
-        { number: "50+", label: "Open Source Projects" },
-        { number: "1000+", label: "Community Members" },
-        { number: "500+", label: "Contributions Made" },
+        { number: "3+", label: "Community Members" },
+        { number: "3+", label: "Open Source Projects" },
+        { number: "400+", label: "Contributions Made" },
       ],
     },
     featured: {
@@ -73,28 +42,28 @@ export const siteContent: SiteContent = {
       subtitle: "Discover our most popular and impactful projects",
       projects: [
         {
-          name: "DevUtils Toolkit",
+          name: "StatusQuest",
           description:
-            "A comprehensive collection of developer utilities including JSON formatters, URL encoders, and code generators.",
-          tech: ["TypeScript", "React", "Node.js"],
-          stars: 245,
-          href: "https://github.com/CodeQuestic/devutils-toolkit",
+            "Visualize, Learn, and Master HTTP Status Codes with Real-World Simulations.",
+          tech: ["TypeScript", "SCSS", "Javascript"],
+          stars: 0,
+          href: "https://github.com/CodeQuestic/statusquest",
         },
         {
-          name: "Learning Pathways",
+          name: "Openprep",
           description:
-            "Structured learning paths for web development, mobile apps, and DevOps with hands-on projects.",
-          tech: ["Next.js", "MDX", "Tailwind"],
+            "Comprehensive collection of resources for various programming languages.",
+          tech: ["Astro", "MDX", "Other"],
           stars: 189,
-          href: "https://github.com/CodeQuestic/learning-pathways",
+          href: "https://github.com/CodeQuestic/openprep",
         },
         {
-          name: "Open API Hub",
+          name: "Stoxcast",
           description:
-            "Collection of free APIs for developers to practice and build projects without setup hassles.",
-          tech: ["Express.js", "MongoDB", "Docker"],
+            "Visualize and analyze stock market trends with real-time data from the website.",
+          tech: ["Python", "Angular", "Docker"],
           stars: 156,
-          href: "https://github.com/CodeQuestic/open-api-hub",
+          href: "https://github.com/CodeQuestic/stoxcast",
         },
       ],
     },
@@ -105,11 +74,13 @@ export const siteContent: SiteContent = {
       actions: [
         {
           href: "https://github.com/CodeQuestic",
+          target: "_blank",
           text: "🌟 Follow on GitHub",
           styleType: "primary",
         },
         {
           href: "/contribute",
+          target: "_self",
           text: "🚀 Start Contributing",
           styleType: "outline",
         },
