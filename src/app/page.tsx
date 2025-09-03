@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { siteContent } from "@/data/content";
-import Button from "../components/Buttons/Buttons";
+import Button from "@/components/Buttons/Buttons";
 import styles from "./Home.module.scss";
 
 export default function Home() {

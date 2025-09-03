@@ -1,4 +1,4 @@
-import styles from "../../styles/pt.module.scss";
+import styles from "@/styles/pt.module.scss";
 
 export default function TermsOfService() {
   return (
