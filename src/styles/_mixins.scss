@@ -1,17 +1,68 @@
+// Standard breakpoint values
+$breakpoints: (
+  xs: 475px,    // Large phones
+  sm: 640px,    // Small tablets / Large phones landscape
+  md: 768px,    // Tablets
+  lg: 1024px,   // Large tablets / Small laptops
+  xl: 1280px,   // Desktops
+  2xl: 1536px   // Large desktops
+);
+
+// Main responsive mixin - Mobile-first approach
 @mixin respond-to($breakpoint) {
-    @if $breakpoint == "sm" {
-      @media (min-width: 640px) { @content; }
-    } @else if $breakpoint == "md" {
-      @media (min-width: 768px) { @content; }
-    } @else if $breakpoint == "lg" {
-      @media (min-width: 1024px) { @content; }
-    } @else if $breakpoint == "xl" {
-      @media (min-width: 1280px) { @content; }
-    }
+  @if $breakpoint == "xs" {
+    @media (min-width: 475px) { @content; }
+  } @else if $breakpoint == "sm" {
+    @media (min-width: 640px) { @content; }
+  } @else if $breakpoint == "md" {
+    @media (min-width: 768px) { @content; }
+  } @else if $breakpoint == "lg" {
+    @media (min-width: 1024px) { @content; }
+  } @else if $breakpoint == "xl" {
+    @media (min-width: 1280px) { @content; }
+  } @else if $breakpoint == "2xl" {
+    @media (min-width: 1536px) { @content; }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}";
+  }
 }
 
+// Desktop-first approach (max-width)
+@mixin respond-down($breakpoint) {
+  @if $breakpoint == "xs" {
+    @media (max-width: 474px) { @content; }
+  } @else if $breakpoint == "sm" {
+    @media (max-width: 639px) { @content; }
+  } @else if $breakpoint == "md" {
+    @media (max-width: 767px) { @content; }
+  } @else if $breakpoint == "lg" {
+    @media (max-width: 1023px) { @content; }
+  } @else if $breakpoint == "xl" {
+    @media (max-width: 1279px) { @content; }
+  } @else if $breakpoint == "2xl" {
+    @media (max-width: 1535px) { @content; }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}";
+  }
+}
+
+// Mobile devices only
 @mixin mobile-devices {
-    @media (max-width: 640px) {
-        @content;
-    }
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+// Tablet devices (all tablets - portrait and landscape)
+@mixin tablet-devices {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+// Desktop devices (laptops and desktops)
+@mixin desktop-devices {
+  @media (min-width: 1024px) {
+    @content;
+  }
 }
