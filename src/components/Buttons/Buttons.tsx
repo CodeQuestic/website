@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({
 
   if (href) {
     return (
-      <Link href={href} className={className}>
+      <Link href={href} target="_blank" className={className}>
         {text}
       </Link>
     );
