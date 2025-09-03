@@ -1,16 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-//colors
-$base-color: #f9fafb;
-$primary-color: #2563eb;
-$secondary-color: #e5e7e5;
-$text-dark-color: #374151;
-$text-light-color: #6b7280;
+// Base colors
+$base-color: #fafbff;
+$base-alt-color: #f8fafc;
+$pure-white: #ffffff;
+
+// Primary blue palette
+$primary-color: #3b82f6;
+$primary-dark: #1d4ed8;
+$primary-light: #dbeafe;
+$primary-gradient-start: #3b82f6;
+$primary-gradient-end: #1e40af;
+
+// Secondary colors
+$secondary-color: #e2e8f0;
+$secondary-dark: #cbd5e1;
+
+// Text colors
+$text-dark-color: #0f172a;
+$text-medium-color: #334155;
+$text-light-color: #64748b;
+$text-muted-color: #94a3b8;
+
+// Accent colors
 $accent-color: #f59e0b;
-$dark-color: #00171F;
-$footer-primary-color: #6b7280;
-$footer-secondary-color: #374151;
+$accent-secondary: #10b981;
+$accent-tertiary: #8b5cf6;
+
+// Dark theme colors
+$dark-color: #0f172a;
+$dark-secondary: #1e293b;
+$dark-accent: #475569;
+
+// Footer colors
+$footer-primary-color: #64748b;
+$footer-secondary-color: #334155;
+
+// Gradient combinations
+$gradient-primary: linear-gradient(135deg, $primary-color 0%, $primary-dark 100%);
+$gradient-accent: linear-gradient(135deg, $accent-color 0%, #f97316 100%);
+$gradient-dark: linear-gradient(135deg, $dark-color 0%, $dark-secondary 100%);
+
+// Shadow colors
+$shadow-light: rgba(15, 23, 42, 0.08);
+$shadow-medium: rgba(15, 23, 42, 0.12);
+$shadow-strong: rgba(15, 23, 42, 0.18);
+
+// Border colors
+$border-light: #e2e8f0;
+$border-medium: #cbd5e1;
+$border-accent: rgba(59, 130, 246, 0.2);
 
 //fonts
 $font-family-logo: "League Spartan", sans-serif;
