@@ -66,7 +66,6 @@ export const siteContent: SiteContent = {
         { number: "50+", label: "Open Source Projects" },
         { number: "1000+", label: "Community Members" },
         { number: "500+", label: "Contributions Made" },
-        { number: "24/7", label: "Community Support" },
       ],
     },
     featured: {
@@ -101,9 +100,8 @@ export const siteContent: SiteContent = {
     },
     community: {
       title: "Join Our Community",
-      subtitle: "Connect with developers from around the world",
       description:
-        "Whether you're looking to contribute to open source, learn new technologies, or find your next career opportunity, our community is here to support your journey.",
+        "Be part of something bigger. Let’s build, learn, and grow together.",
       actions: [
         {
           href: "https://github.com/CodeQuestic",
@@ -115,7 +113,7 @@ export const siteContent: SiteContent = {
           text: "🚀 Start Contributing",
           styleType: "outline",
         },
-      ]
+      ],
     },
   },
   projects: {},

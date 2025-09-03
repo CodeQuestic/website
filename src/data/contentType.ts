@@ -53,7 +53,6 @@ export interface FeaturedContent {
 
 export interface CommunityContent {
   title: string;
-  subtitle: string;
   description: string;
   actions: Action[];
 }
