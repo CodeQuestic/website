@@ -6,6 +6,7 @@ interface ButtonProps {
   href?: string;
   type?: "button" | "submit" | "reset";
   styleType?: "primary" | "outline";
+  target?: "_blank" | "_self";
   text: string;
   onClick?: () => void;
 }
@@ -14,6 +15,7 @@ const Button: React.FC<ButtonProps> = ({
   href,
   type = "button",
   styleType = "primary",
+  target = "_self",
   text,
   onClick,
 }) => {
@@ -21,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({
 
   if (href) {
     return (
-      <Link href={href} target="_blank" className={className}>
+      <Link href={href} target={target} className={className}>
         {text}
       </Link>
     );
