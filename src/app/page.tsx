@@ -21,6 +21,7 @@ export default function Home() {
                   key={action?.href}
                   href={action?.href}
                   styleType={action?.styleType}
+                  target={action?.target}
                   text={action?.text}
                   type="button"
                 />
@@ -94,6 +95,14 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+          <div className={styles.projectActions}>
+            <Button
+              href="/projects"
+              styleType="outline"
+              text="View All Projects"
+              type="button"
+            />
           </div>
         </div>
       </section>
