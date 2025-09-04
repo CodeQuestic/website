@@ -37,12 +37,14 @@ export interface FeaturedProject {
   tech: string[];
   stars: number;
   href: string;
+  target: "_blank" | "_self";
 }
 
 export interface FeaturedContent {
   title: string;
   subtitle: string;
   projects: FeaturedProject[];
+  actions: Action[];
 }
 
 export interface CommunityContent {

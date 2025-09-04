@@ -45,9 +45,10 @@ export const siteContent: SiteContent = {
           name: "StatusQuest",
           description:
             "Visualize, Learn, and Master HTTP Status Codes with Real-World Simulations.",
-          tech: ["TypeScript", "SCSS", "Javascript"],
+          tech: ["TypeScript", "SCSS", "Js"],
           stars: 0,
           href: "https://github.com/CodeQuestic/statusquest",
+          target: "_blank",
         },
         {
           name: "Openprep",
@@ -56,6 +57,7 @@ export const siteContent: SiteContent = {
           tech: ["Astro", "MDX", "Other"],
           stars: 189,
           href: "https://github.com/CodeQuestic/openprep",
+          target: "_blank",
         },
         {
           name: "Stoxcast",
@@ -64,6 +66,15 @@ export const siteContent: SiteContent = {
           tech: ["Python", "Angular", "Docker"],
           stars: 156,
           href: "https://github.com/CodeQuestic/stoxcast",
+          target: "_blank",
+        },
+      ],
+      actions: [
+        {
+          href: "/projects",
+          target: "_self",
+          text: "🚀 View All Projects",
+          styleType: "outline",
         },
       ],
     },
@@ -75,13 +86,13 @@ export const siteContent: SiteContent = {
         {
           href: "https://github.com/CodeQuestic",
           target: "_blank",
-          text: "🌟 Follow on GitHub",
+          text: "Follow on GitHub 🔥",
           styleType: "primary",
         },
         {
-          href: "/contribute",
-          target: "_self",
-          text: "🚀 Start Contributing",
+          href: "https://github.com/orgs/CodeQuestic/discussions",
+          target: "_blank",
+          text: "Join the Discussion ⚡️",
           styleType: "outline",
         },
       ],
