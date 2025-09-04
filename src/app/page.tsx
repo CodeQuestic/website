@@ -48,7 +48,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className={styles.stats}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>
@@ -57,15 +56,14 @@ export default function Home() {
           <div className={styles.statsGrid}>
             {siteContent?.home?.stats?.items?.map((stat, index) => (
               <div key={index} className={styles.statCard}>
-                <div className={styles.statNumber}>{stat.number}</div>
-                <div className={styles.statLabel}>{stat.label}</div>
+                <div className={styles.statNumber}>{stat?.number}</div>
+                <div className={styles.statLabel}>{stat?.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Projects Section */}
       <section className={styles.projects}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>
@@ -77,20 +75,24 @@ export default function Home() {
           <div className={styles.projectsGrid}>
             {siteContent?.home?.featured?.projects?.map((project, index) => (
               <div key={index} className={styles.projectCard}>
-                <h3 className={styles.projectName}>{project.name}</h3>
+                <h3 className={styles.projectName}>{project?.name}</h3>
                 <p className={styles.projectDescription}>
-                  {project.description}
+                  {project?.description}
                 </p>
                 <div className={styles.projectTech}>
-                  {project.tech?.map((tech, techIndex) => (
+                  {project?.tech?.map((tech, techIndex) => (
                     <span key={techIndex} className={styles.techTag}>
                       {tech}
                     </span>
                   ))}
                 </div>
                 <div className={styles.projectMeta}>
-                  <a href={project.href} className={styles.projectLink}>
-                    View Project →
+                  <a
+                    href={project?.href}
+                    target={project?.target}
+                    className={styles.projectLink}
+                  >
+                    {project?.text}
                   </a>
                 </div>
               </div>
@@ -98,16 +100,16 @@ export default function Home() {
           </div>
           <div className={styles.projectActions}>
             <Button
-              href="/projects"
-              styleType="outline"
-              text="View All Projects"
+              href={siteContent?.home?.featured?.actions[0]?.href}
+              styleType={siteContent?.home?.featured?.actions[0]?.styleType}
+              text={siteContent?.home?.featured?.actions[0]?.text}
               type="button"
+              className={styles.projectButton}
             />
           </div>
         </div>
       </section>
 
-      {/* Community Section */}
       <section className={styles.community}>
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>
