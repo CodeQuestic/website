@@ -1,5 +1,6 @@
 @use "../styles/mixins" as *;
 @use "../styles/variables.scss" as *;
+@use "sass:color";
 
 .hero {
   background-color: $pure-white;
@@ -74,5 +75,218 @@
       max-width: 100%;
       height: auto;
     }
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @include respond-to("md") {
+    padding: 0 2rem;
+  }
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: $text-dark-color;
+
+  @include respond-to("md") {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: $text-light-color;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include respond-to("md") {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.stats {
+  padding: $padding-all-1;
+  background-color: $base-alt-color;
+
+  @include respond-to("md") {
+    padding: $padding-left-right-4-top-bottom-2;
+  }
+
+  .statsGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    @include respond-to("md") {
+      flex-direction: row;
+      gap: 3rem;
+    }
+
+    .statCard {
+      text-align: center;
+      padding: 0.5rem;
+
+      @include respond-to("md") {
+        padding: 1.5rem;
+      }
+
+      .statNumber {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: $primary-color;
+        margin-bottom: 0.5rem;
+
+        @include respond-to("md") {
+          font-size: 3rem;
+        }
+      }
+
+      .statLabel {
+        font-size: 0.9rem;
+        color: $text-light-color;
+        font-weight: 500;
+
+        @include respond-to("md") {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.projects {
+  padding: $padding-all-1;
+  background-color: $pure-white;
+
+  @include respond-to("md") {
+    padding: $padding-left-right-4-top-bottom-2;
+  }
+
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @include respond-to("xl") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .projectCard {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border-color: $primary-color;
+      }
+
+      .projectName {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 0.75rem;
+        color: $text-dark-color;
+      }
+
+      .projectDescription {
+        color: $text-light-color;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
+
+      .projectTech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+
+        .techTag {
+          background-color: #f1f5f9;
+          color: $primary-color;
+          padding: 0.25rem 0.75rem;
+          border-radius: 20px;
+          font-size: 0.85rem;
+          font-weight: 500;
+        }
+      }
+
+      .projectMeta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .projectLink {
+          color: $primary-color;
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 0.9rem;
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          border: 2px solid $primary-color;
+          
+          &:hover {
+            color: $accent-color;
+            border-color: $accent-color;
+          }
+        }
+      }
+    }
+  }
+  .projectActions {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+
+    .projectButton {
+      border-color: $accent-color;
+      color: $accent-color;
+    }
+  }
+}
+
+.community {
+  padding: $padding-all-1;
+  background-color: $base-alt-color;
+  text-align: center;
+
+    @include respond-to("md") {
+    padding: $padding-left-right-4-top-bottom-2;
+  }
+
+  .communityDescription {
+    color: $text-light-color;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+
+    @include respond-to("md") {
+      font-size: 1.1rem;
+    }
+  }
+
+  .communityActions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 }

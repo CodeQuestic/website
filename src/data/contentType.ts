@@ -2,6 +2,7 @@ export type ButtonStyleType = "primary" | "outline";
 
 export interface Action {
   href: string;
+  target: "_blank" | "_self";
   text: string;
   styleType: ButtonStyleType;
 }
@@ -20,13 +21,6 @@ export interface AboutFeature {
   description: string;
 }
 
-export interface AboutContent {
-  title: string;
-  description: string;
-  content: string;
-  features: AboutFeature[];
-}
-
 export interface StatsItem {
   number: string;
   label: string;
@@ -43,24 +37,25 @@ export interface FeaturedProject {
   tech: string[];
   stars: number;
   href: string;
+  target: "_blank" | "_self";
+  text: string;
 }
 
 export interface FeaturedContent {
   title: string;
   subtitle: string;
   projects: FeaturedProject[];
+  actions: Action[];
 }
 
 export interface CommunityContent {
   title: string;
-  subtitle: string;
   description: string;
   actions: Action[];
 }
 
 export interface HomeContent {
   hero: HeroContent;
-  about: AboutContent;
   stats: StatsContent;
   featured: FeaturedContent;
   community: CommunityContent;

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { siteContent } from "@/data/content";
-import Button from "../components/Buttons/Buttons";
+import Button from "@/components/Buttons/Buttons";
 import styles from "./Home.module.scss";
 
 export default function Home() {
@@ -21,6 +21,7 @@ export default function Home() {
                   key={action?.href}
                   href={action?.href}
                   styleType={action?.styleType}
+                  target={action?.target}
                   text={action?.text}
                   type="button"
                 />
@@ -46,8 +47,89 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className={styles.about}>
-        <h1>About</h1>
+
+      <section className={styles.stats}>
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>
+            {siteContent?.home?.stats?.title}
+          </h2>
+          <div className={styles.statsGrid}>
+            {siteContent?.home?.stats?.items?.map((stat, index) => (
+              <div key={index} className={styles.statCard}>
+                <div className={styles.statNumber}>{stat?.number}</div>
+                <div className={styles.statLabel}>{stat?.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.projects}>
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>
+            {siteContent?.home?.featured?.title}
+          </h2>
+          <p className={styles.sectionSubtitle}>
+            {siteContent?.home?.featured?.subtitle}
+          </p>
+          <div className={styles.projectsGrid}>
+            {siteContent?.home?.featured?.projects?.map((project, index) => (
+              <div key={index} className={styles.projectCard}>
+                <h3 className={styles.projectName}>{project?.name}</h3>
+                <p className={styles.projectDescription}>
+                  {project?.description}
+                </p>
+                <div className={styles.projectTech}>
+                  {project?.tech?.map((tech, techIndex) => (
+                    <span key={techIndex} className={styles.techTag}>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <div className={styles.projectMeta}>
+                  <a
+                    href={project?.href}
+                    target={project?.target}
+                    className={styles.projectLink}
+                  >
+                    {project?.text}
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className={styles.projectActions}>
+            <Button
+              href={siteContent?.home?.featured?.actions[0]?.href}
+              styleType={siteContent?.home?.featured?.actions[0]?.styleType}
+              text={siteContent?.home?.featured?.actions[0]?.text}
+              type="button"
+              className={styles.projectButton}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.community}>
+        <div className={styles.container}>
+          <h2 className={styles.sectionTitle}>
+            {siteContent?.home?.community?.title}
+          </h2>
+          <p className={styles.communityDescription}>
+            {siteContent?.home?.community?.description}
+          </p>
+          <div className={styles.communityActions}>
+            {siteContent?.home?.community?.actions?.map((action, index) => (
+              <Button
+                key={index}
+                href={action?.href}
+                styleType={action?.styleType}
+                text={action?.text}
+                type="button"
+              />
+            ))}
+          </div>
+        </div>
       </section>
     </>
   );

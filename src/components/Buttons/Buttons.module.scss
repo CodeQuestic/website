@@ -3,9 +3,9 @@
 
 .button {
   display: inline-block;
-  padding: 0.5rem 0.5rem;
+  padding: 0.7rem 1rem;
   min-width: 7rem;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   text-align: center;
   text-decoration: none;
   font-weight: 600;
@@ -14,7 +14,7 @@
 
   &--primary {
     background-color: $primary-color;
-    color: $secondary-color;
+    color: $pure-white;
   }
 
   &--outline {
