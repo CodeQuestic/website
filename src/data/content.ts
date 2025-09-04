@@ -49,6 +49,7 @@ export const siteContent: SiteContent = {
           stars: 0,
           href: "https://github.com/CodeQuestic/statusquest",
           target: "_blank",
+          text: "View Project",
         },
         {
           name: "Openprep",
@@ -58,6 +59,7 @@ export const siteContent: SiteContent = {
           stars: 189,
           href: "https://github.com/CodeQuestic/openprep",
           target: "_blank",
+          text: "View Project",
         },
         {
           name: "Stoxcast",
@@ -67,6 +69,7 @@ export const siteContent: SiteContent = {
           stars: 156,
           href: "https://github.com/CodeQuestic/stoxcast",
           target: "_blank",
+          text: "View Project",
         },
       ],
       actions: [

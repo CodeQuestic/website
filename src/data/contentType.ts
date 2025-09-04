@@ -38,6 +38,7 @@ export interface FeaturedProject {
   stars: number;
   href: string;
   target: "_blank" | "_self";
+  text: string;
 }
 
 export interface FeaturedContent {
