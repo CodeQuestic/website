@@ -237,12 +237,26 @@
           text-decoration: none;
           font-weight: 500;
           font-size: 0.9rem;
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          border: 2px solid $primary-color;
           
           &:hover {
-            color: color.adjust($primary-color, $lightness: -10%);
+            color: $accent-color;
+            border-color: $accent-color;
           }
         }
       }
+    }
+  }
+  .projectActions {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+
+    .projectButton {
+      border-color: $accent-color;
+      color: $accent-color;
     }
   }
 }
@@ -258,7 +272,7 @@
 
   .communityDescription {
     color: $text-light-color;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -266,7 +280,6 @@
 
     @include respond-to("md") {
       font-size: 1.1rem;
-      margin-bottom: 3rem;
     }
   }
 
