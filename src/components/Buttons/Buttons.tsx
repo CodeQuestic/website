@@ -21,18 +21,33 @@ const Button: React.FC<ButtonProps> = ({
   className = "",
   onClick,
 }) => {
-  const btnClassName = `${styles.button} ${styles[`button--${styleType}`]} ${className}`;
+  const btnClassName = `${styles.button} ${
+    styles[`button--${styleType}`]
+  } ${className}`;
+
+  const handleClick = () => {
+    if (href && onClick) {
+      onClick();
+    } else if (onClick) {
+      onClick();
+    }
+  };
 
   if (href) {
     return (
-      <Link href={href} target={target} className={btnClassName}>
+      <Link
+        href={href}
+        target={target}
+        className={btnClassName}
+        onClick={handleClick}
+      >
         {text}
       </Link>
     );
   }
 
   return (
-    <button type={type} className={btnClassName} onClick={onClick}>
+    <button type={type} className={btnClassName} onClick={handleClick}>
       {text}
     </button>
   );
