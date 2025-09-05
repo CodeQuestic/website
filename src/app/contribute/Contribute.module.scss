@@ -1,0 +1,189 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables.scss" as *;
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  color: $text-dark-color;
+
+  @include respond-to("md") {
+    padding: 3rem 2rem;
+  }
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: $primary-color;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: $text-medium-color;
+}
+
+.thankYou {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background-color: $primary-light;
+  border-radius: 0.8rem;
+  font-weight: 500;
+  color: $primary-dark;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+
+  h2 {
+    margin-bottom: 1rem;
+    color: $primary-color;
+    border-bottom: 2px solid $border-light;
+    padding-bottom: 0.5rem;
+  }
+
+  h3 {
+    margin: 1.5rem 0 1rem 0;
+    color: $text-dark-color;
+    font-size: 1.1rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  ul,
+  ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+.codeBlock {
+  background-color: $dark-color;
+  color: $pure-white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+
+  .terminal {
+    color: $accent-color;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background-color: $pure-white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px $shadow-light;
+
+  th,
+  td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid $border-light;
+  }
+
+  th {
+    background-color: $primary-light;
+    color: $primary-dark;
+    font-weight: 600;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+}
+
+.highlight {
+  background-color: $accent-secondary;
+  color: $pure-white;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+  font-weight: 500;
+}
+
+.warning {
+  background-color: #fef3c7;
+  border-left: 4px solid $accent-color;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+
+  .warningTitle {
+    font-weight: bold;
+    color: #92400e;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: #92400e;
+    margin: 0;
+  }
+}
+
+.note {
+  background-color: $primary-light;
+  border-left: 4px solid $primary-color;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+
+  .noteTitle {
+    font-weight: bold;
+    color: $primary-dark;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: $primary-dark;
+    margin: 0;
+  }
+}
+
+.congratulations {
+  text-align: center;
+  background: $gradient-primary;
+  color: $pure-white;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-top: 3rem;
+
+  h2 {
+    color: $pure-white;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+
+  @include respond-to("md") {
+    justify-content: flex-start;
+  }
+}
