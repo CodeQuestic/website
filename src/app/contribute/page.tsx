@@ -23,7 +23,7 @@ export default function Contribute() {
 
       <div className={styles.links}>
         <Button
-          href="https://github.com/website/.github/blob/main/CODE_OF_CONDUCT.md"
+          href="https://github.com/CodeQuestic/website/blob/main/.github/CODE_OF_CONDUCT.md"
           target="_blank"
           text="Code Of Conduct"
           styleType="outline"
