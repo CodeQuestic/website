@@ -2,10 +2,11 @@
 
 import Button from "@/components/Buttons/Buttons";
 import styles from "./Contribute.module.scss";
+import ptStyles from "@/styles/pt.module.scss";
 
 export default function Contribute() {
   return (
-    <div className={styles.container}>
+    <div className={ptStyles.legalContainer}>
       <h1 className={styles.title}>
         Interested in contributing to CodeQuestic?
       </h1>
@@ -22,7 +23,7 @@ export default function Contribute() {
 
       <div className={styles.links}>
         <Button
-          href="https://github.com/CodeQuestic/.github/blob/main/CODE_OF_CONDUCT.md"
+          href="https://github.com/website/.github/blob/main/CODE_OF_CONDUCT.md"
           target="_blank"
           text="Code Of Conduct"
           styleType="outline"
@@ -311,21 +312,6 @@ export default function Contribute() {
         <p>
           <strong>Thank you for your contribution! 🙌</strong>
         </p>
-      </div>
-
-      <div className={styles.links}>
-        <Button
-          href="https://github.com/CodeQuestic"
-          target="_blank"
-          text="Visit CodeQuestic GitHub"
-          styleType="primary"
-        />
-        <Button
-          href="https://github.com/orgs/CodeQuestic/discussions"
-          target="_blank"
-          text="Join Discussions"
-          styleType="outline"
-        />
       </div>
     </div>
   );
