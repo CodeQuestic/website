@@ -74,8 +74,8 @@ export const siteContent: SiteContent = {
       ],
       actions: [
         {
-          href: "/projects",
-          target: "_self",
+          href: "https://github.com/orgs/CodeQuestic/repositories",
+          target: "_blank",
           text: "🚀 View All Projects",
           styleType: "outline",
         },
@@ -112,8 +112,9 @@ export const headerContent = {
   logo: "CodeQuestic",
   navLinks: [
     { href: "/", label: "Home" },
-    { href: "/projects", label: "Projects" },
+    { href: "/code-of-conduct", label: "Code of Conduct" },
     { href: "/contribute", label: "Contribute" },
+    { href: "/name-convention", label: "Name Convention" },
     { href: "/contact", label: "Contact" },
   ],
 };
