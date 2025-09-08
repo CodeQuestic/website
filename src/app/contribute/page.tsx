@@ -13,21 +13,11 @@ export default function Contribute() {
 
       <div className={styles.thankYou}>
         <p>First of all, thank you for taking the time to contribute! 🤙</p>
-      </div>
-
-      <p className={styles.subtitle}>
-        The following is a set of guidelines for contributing to this
-        repository. Before contributing, we encourage you to read our Code of
-        Conduct.
-      </p>
-
-      <div className={styles.links}>
-        <Button
-          href="https://github.com/CodeQuestic/website/blob/main/.github/CODE_OF_CONDUCT.md"
-          target="_blank"
-          text="Code Of Conduct"
-          styleType="outline"
-        />
+        <p>
+          The following is a set of guidelines for contributing to this
+          repository. Before contributing, we encourage you to read our Code of
+          Conduct.
+        </p>
       </div>
 
       <section className={styles.section}>
