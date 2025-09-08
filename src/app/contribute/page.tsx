@@ -1,6 +1,5 @@
 "use client";
 
-import Button from "@/components/Buttons/Buttons";
 import styles from "./Contribute.module.scss";
 import ptStyles from "@/styles/pt.module.scss";
 
