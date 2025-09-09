@@ -229,7 +229,7 @@ export default function Contribute() {
                           .split(contribute.labels.createPRSearchPattern)
                           .map((part, partIndex) =>
                             partIndex === 0 ? (
-                              <strong>{part}</strong>
+                              <strong key={partIndex}>{part}</strong>
                             ) : (
                               <span key={partIndex}>
                                 {contribute.labels.createPRQuote}
