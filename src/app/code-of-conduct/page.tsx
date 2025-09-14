@@ -71,12 +71,11 @@ export default function CodeOfConduct() {
           </h2>
           <div className={styles.textContent}>
             {codeOfConduct.attribution.text.map((paragraph, index) =>
-              // <p key={index}>{paragraph}</p>
               renderTextWithEmailLinks({
                 emailText: paragraph,
                 index: index,
                 emailLinkClassName: styles.emailLink,
-                // linkClassName: styles.externalLink,
+                linkClassName: styles.externalLink,
               })
             )}
           </div>

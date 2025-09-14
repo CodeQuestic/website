@@ -44,6 +44,7 @@
   margin: 0 auto;
   word-wrap: break-word;
   hyphens: auto;
+  color: $base-color;
 
   @include respond-to("md") {
     font-size: 1.25rem;
@@ -108,6 +109,15 @@
   @include respond-to("lg") {
     font-size: 2rem;
   }
+}
+
+.emailLink {
+  color: $accent-color;
+  text-decoration: none;
+}
+
+.externalLink {
+  color: $accent-color;
 }
 
 .textContent {
