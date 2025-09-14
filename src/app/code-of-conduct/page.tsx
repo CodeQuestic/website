@@ -1,6 +1,7 @@
 import styles from "./CodeOfConduct.module.scss";
 import ptStyles from "@/styles/pt.module.scss";
 import { siteContent } from "@/data/content";
+import { renderTextWithEmailLinks } from "@/utils/RenderText";
 
 export default function CodeOfConduct() {
   const { codeOfConduct } = siteContent;
@@ -17,9 +18,13 @@ export default function CodeOfConduct() {
           <section key={section.id} className={styles.section}>
             <h2 className={styles.sectionTitle}>{section.title}</h2>
             <div className={styles.textContent}>
-              {section.content.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
+              {section.content.map((paragraph, index) =>
+                renderTextWithEmailLinks({
+                  emailText: paragraph,
+                  index,
+                  emailLinkClassName: styles.emailLink,
+                })
+              )}
               {section.list && (
                 <ul className={styles.list}>
                   {section.list.map((item, index) => (
@@ -65,9 +70,14 @@ export default function CodeOfConduct() {
             {codeOfConduct.labels.attributionTitle}
           </h2>
           <div className={styles.textContent}>
-            {codeOfConduct.attribution.text.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+            {codeOfConduct.attribution.text.map((paragraph, index) =>
+              renderTextWithEmailLinks({
+                emailText: paragraph,
+                index: index,
+                emailLinkClassName: styles.emailLink,
+                linkClassName: styles.externalLink,
+              })
+            )}
           </div>
         </section>
       </div>
