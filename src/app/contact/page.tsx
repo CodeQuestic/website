@@ -4,6 +4,7 @@ import { useState } from "react";
 import styles from "./Contact.module.scss";
 import ptStyles from "@/styles/pt.module.scss";
 import { siteContent } from "@/data/content";
+import type { FormField } from "@/data/contentType";
 
 export default function Contact() {
   const { contact } = siteContent;
@@ -71,8 +72,8 @@ export default function Contact() {
         <form onSubmit={handleSubmit}>
           <div className={styles.fieldGroup}>
             {contact.form.fields
-              .filter((field: any) => field.type !== "textarea")
-              .map((field: any) => (
+              .filter((field: FormField) => field.type !== "textarea")
+              .map((field: FormField) => (
                 <div key={field.name} className={styles.formGroup}>
                   <label htmlFor={field.name} className={styles.label}>
                     {field.label}
@@ -96,8 +97,8 @@ export default function Contact() {
           </div>
 
           {contact.form.fields
-            .filter((field: any) => field.type === "textarea")
-            .map((field: any) => (
+            .filter((field: FormField) => field.type === "textarea")
+            .map((field: FormField) => (
               <div key={field.name} className={styles.formGroup}>
                 <label htmlFor={field.name} className={styles.label}>
                   {field.label}

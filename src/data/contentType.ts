@@ -81,15 +81,8 @@ export interface ContactLink {
   text: string;
 }
 
-export interface InfoSection {
-  heading: string;
-  content: string;
-  link: ContactLink;
-}
-
 export interface ContactInfo {
   title: string;
-  sections: InfoSection[];
 }
 
 export interface ContactContent {
