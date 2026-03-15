@@ -636,7 +636,40 @@ export const siteContent: SiteContent = {
       example: "Example:",
     },
   },
-  contact: {},
+  contact: {
+    title: "Get In Touch",
+    subtitle:
+      "We'd love to hear from you! Don't hesitate to reach out with any questions or feedback.",
+    form: {
+      fields: [
+        {
+          name: "name",
+          label: "Your Name",
+          type: "text",
+          placeholder: "John Doe",
+          required: true,
+        },
+        {
+          name: "email",
+          label: "Your Email",
+          type: "email",
+          placeholder: "john@example.com",
+          required: true,
+        },
+        {
+          name: "message",
+          label: "Message",
+          type: "textarea",
+          placeholder: "Tell us what's on your mind...",
+          required: true,
+        },
+      ],
+      submitButton: "Send Message",
+      successMessage:
+        "Thank you! Your message has been sent successfully. We'll get back to you soon!",
+      errorMessage: "Oops! Something went wrong. Please try again.",
+    },
+  },
 };
 
 // COMPONENTS CONTENT
