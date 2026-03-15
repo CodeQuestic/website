@@ -61,12 +61,49 @@ export interface HomeContent {
   community: CommunityContent;
 }
 
+export interface FormField {
+  name: string;
+  label: string;
+  type: "text" | "email" | "textarea";
+  placeholder: string;
+  required: boolean;
+}
+
+export interface FormConfig {
+  fields: FormField[];
+  submitButton: string;
+  successMessage: string;
+  errorMessage: string;
+}
+
+export interface ContactLink {
+  href: string;
+  text: string;
+}
+
+export interface InfoSection {
+  heading: string;
+  content: string;
+  link: ContactLink;
+}
+
+export interface ContactInfo {
+  title: string;
+  sections: InfoSection[];
+}
+
+export interface ContactContent {
+  title: string;
+  subtitle: string;
+  form: FormConfig;
+}
+
 export interface SiteContent {
   home: HomeContent;
   codeOfConduct: CodeOfConductContent;
   contribute: ContributeContent;
   nameConvention: NameConventionContent;
-  contact: Record<string, unknown>;
+  contact: ContactContent;
 }
 
 export interface CodeOfConductContent {
